@@ -36,6 +36,7 @@ export default function App() {
         width="100%"
         playing
         controls={isMobile()}
+        style={isMobile() && {paddingBottom:"60px"} }
         onReady={onReady}
         url="https://d17jt2qgcfqmxo.cloudfront.net/out/v1/23d18db026564b0e9c105c1a2bcec702/index.m3u8"
       />
