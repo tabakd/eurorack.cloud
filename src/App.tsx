@@ -2,7 +2,7 @@ import * as React from "react";
 import ReactPlayer from "react-player";
 import { Helmet } from "react-helmet";
 import "./styles.css";
-
+import Chat from "./Chat";
 export default function App() {
   const [isReady, setIsReady] = React.useState(false);
   const onReady = () => {
@@ -17,6 +17,7 @@ export default function App() {
           src="https://platform-api.sharethis.com/js/sharethis.js#property=5e923fe47966f10012731de8&product=inline-share-buttons"
         />
       </Helmet>
+      <Chat />
       <div className="share">
         <div className="title">
           eurorack cloud radio by{" "}
@@ -26,7 +27,7 @@ export default function App() {
         </div>
         <div className="sharethis-inline-share-buttons" />
       </div>
-      {!isReady && <div className="loading">loading </div>}
+      {!isReady && <div className="loading">loading</div>}
       <ReactPlayer
         className="react-player"
         height="100%"

@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   position: relative;
   height: 100vh;
@@ -45,4 +48,69 @@ body {
   padding: 0;
   margin: 0;
   background: black;
+}
+
+
+.Chat--Message {
+  color: white;
+  margin-bottom: 0.5em;
+  
+}
+
+.Chat--Message--Author {
+font-style: italic;
+font-size: 0.8em;
+  
+}
+
+.Chat--Message--Content {
+  color: white;
+  
+}
+
+
+.Chat input::placeholder { color: white;}
+.Chat input {
+  width: 100%;
+  display: block;
+  font-size: 1em;
+  
+
+  padding: 0.4em;
+  background: black;
+  color: white;
+border: none;
+  border-top: 1px solid white;
+  outline: none;
+}
+
+
+
+
+.Chat--Messages {
+  padding: 1em;
+  padding-bottom: 40px;
+overflow-y:scroll;
+
+
+}
+.Chat {
+  border: 1px solid white;
+ 
+  font-size: 1em;
+  width: 300px;
+  height: 600px;
+
+  position: fixed;
+  right: 10px;;
+  bottom: 0;
+  background: black;
+
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: left;
+  margin-bottom: 100px;
+  z-index: 100;
 }
