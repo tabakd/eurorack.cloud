@@ -3,6 +3,8 @@ import ReactPlayer from "react-player";
 import { Helmet } from "react-helmet";
 import "./styles.css";
 import Chat from "./Chat";
+import isMobile from "./isMobile";
+
 export default function App() {
   const [isReady, setIsReady] = React.useState(false);
   const onReady = () => {
@@ -17,7 +19,7 @@ export default function App() {
           src="https://platform-api.sharethis.com/js/sharethis.js#property=5e923fe47966f10012731de8&product=inline-share-buttons"
         />
       </Helmet>
-      <Chat />
+       <Chat />
       <div className="share">
         <div className="title">
           eurorack cloud radio by{" "}
@@ -33,6 +35,7 @@ export default function App() {
         height="100%"
         width="100%"
         playing
+        controls={isMobile()}
         onReady={onReady}
         url="https://d17jt2qgcfqmxo.cloudfront.net/out/v1/23d18db026564b0e9c105c1a2bcec702/index.m3u8"
       />

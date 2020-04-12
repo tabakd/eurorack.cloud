@@ -1,6 +1,7 @@
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import * as firebase from "firebase";
 import * as React from "react";
+import isMobile from "./isMobile";
 
 var config = {
     apiKey: "AIzaSyAEM42tKBf6AAOAaENrCYmVDdSLFgLGHzw",
@@ -47,7 +48,7 @@ export default function Chat() {
     }, [messagesContainerRef])
 
     return (
-        <div className="Chat">
+        <div className="Chat" style={ isMobile() ? {height:  '30vh', top: 0} : undefined }>
 
             <div className="Chat--Messages" ref={messagesContainerRef}>
                 {messages?.map((message) => {
