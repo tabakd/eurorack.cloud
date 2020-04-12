@@ -18,6 +18,7 @@ const messagesCollection = app.firestore().collection('messages');
 
 interface Message {
     content: string
+    author?: string
 }
 
 export default function Chat() {
@@ -51,7 +52,7 @@ export default function Chat() {
             <div className="Chat--Messages" ref={messagesContainerRef}>
                 {messages?.map((message) => {
                     return (<div className={"Chat--Message"} >
-                        <div className="Chat--Message--Author">anonymous</div>
+                        <div className="Chat--Message--Author">{message.author || "anonymous"}</div>
                         <div className="Chat--Message--Content">{message.content}</div>
                     </div>);
                 })}
