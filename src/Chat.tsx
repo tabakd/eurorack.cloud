@@ -29,6 +29,7 @@ export default function Chat() {
     const messagesContainerRef = React.useRef<HTMLDivElement>(null);
     const onSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!messageDraft) return;
         messagesCollection.add({
             content: messageDraft,
             timestamp: new Date().getTime()
