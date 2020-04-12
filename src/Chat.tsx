@@ -61,7 +61,7 @@ export default function Chat() {
             </div>
             <form onSubmit={onSubmit}>
                 <input type="text" placeholder="Send a message." onChange={(e) => setMessageDraft(e.target.value)} value={messageDraft} />
-                <input type="submit" hidden />
+                <input type="submit" hidden style={{display: 'none'}} />
             </form>
         </div>
     );
