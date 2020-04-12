@@ -14,7 +14,10 @@ var config = {
     measurementId: "G-R22G5726ZZ"
 
 };
+
+
 const app = firebase.initializeApp(config);
+app.analytics()
 const messagesCollection = app.firestore().collection('messages');
 
 interface Message {
